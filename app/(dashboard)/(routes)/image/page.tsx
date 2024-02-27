@@ -165,8 +165,8 @@ const ImagePage = () => {
             <Empty label="No images generated." />
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
-            {images.map((src) => (
-              <Card className="rounded-lg overflow-hidden">
+            {images.map((src, index) => (
+              <Card key={index} className="rounded-lg overflow-hidden">
                 <div className="relative aspect-square">
                   <Image alt="Image" fill src={src} />
                 </div>
